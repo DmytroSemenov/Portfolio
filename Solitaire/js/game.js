@@ -209,18 +209,7 @@ class Game {
         baseDeck.push(new Card({ suitIndex, signIndex }));
       }
     }
-    // let i = baseDeck.length - 1;
-    // const cards = [];
-    // while (i >= 0) {
-    //   let index = Math.round(Math.random() * i);
-    //   cards.push(baseDeck.splice(index, 1)[0]);
-    //   i--;
-    // }
-    // return cards;
-
-    // I like the shortest version because it's only about 2,5 times slower.
-    // But if you insist,
-    // I'll change it to the upper version
+    
     return baseDeck.sort((a, b) => Math.random() - 0.5);
   }
 
