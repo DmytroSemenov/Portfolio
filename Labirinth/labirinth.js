@@ -17,6 +17,8 @@ function init() {
   let changeSell = changeWall;
   let canReach = false;
 
+  _renderHTML();
+
   document.getElementById('start').addEventListener('click', () => {
     mazeDimenshions.xSize = +document.forms[0].elements.xSize.value;
     mazeDimenshions.ySize = +document.forms[0].elements.ySize.value;
@@ -295,5 +297,20 @@ function init() {
         bestNumber.nextY = yY;
       }
     }
+  }
+
+  function _renderHTML() {
+    document.body.innerHTML = `
+    <form class="dimensions" name="dimensions">
+    <fieldset name="set">
+      <legend>Maze dimensions</legend>
+      <input name="xSize" size="1" value="31" />
+      <input name="ySize" size="1" value="21" />
+      <input id="start" type="button" value="Create maze" />
+    </fieldset>
+  </form>
+  <div id="gameTable" class="game-lab" onselectstart="return false"></div>
+  <div class="menu"></div>
+  `;
   }
 }

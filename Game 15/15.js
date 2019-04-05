@@ -1,7 +1,12 @@
 'use strict';
 
 function createNewTable() {
-  const table = document.querySelector('table');
+  document.body.innerHTML = `
+  <table class="container"></table>
+  <button class="restart">START NEW GAME</button>
+  <div class="winner visibility"><span>You win!</span></div>
+  `;
+  const table = document.querySelector('.container'); // conteiner
   table.innerHTML = '';
 
   for (let i = 0; i < 4; i++) {
@@ -52,7 +57,7 @@ function testWin() {
   for (let i = 1; i < 16; i++) {
     if (tds[i - 1].innerHTML != i) return;
   }
-  winner.classList.remove('visibility');
+  document.querySelector('.winner').classList.remove('visibility');
 }
 
 //     first run
