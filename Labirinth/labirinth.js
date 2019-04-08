@@ -18,8 +18,11 @@ function init(gameContainer) {
   let canReach = false;
 
   _renderHTML(gameContainer);
+  onStartClick();
 
-  document.getElementById('start').addEventListener('click', () => {
+  document.getElementById('start').addEventListener('click', onStartClick);
+
+  function onStartClick() {
     mazeDimenshions.xSize = +document.forms[0].elements.xSize.value;
     mazeDimenshions.ySize = +document.forms[0].elements.ySize.value;
 
@@ -30,7 +33,7 @@ function init(gameContainer) {
 
     renderMaze();
     createButtons();
-  });
+  }
 
   function createMaze(settings, startCell, finishCell) {
     const mazeArr = new Array(settings.ySize);

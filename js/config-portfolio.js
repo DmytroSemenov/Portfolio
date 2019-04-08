@@ -12,7 +12,7 @@ const LIST_OF_GAMES = [
   },
   {
     name: 'Пятнашки',
-    thumbImg: 'img/15-thumb.png',
+    thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
       'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',
@@ -20,7 +20,7 @@ const LIST_OF_GAMES = [
   },
   {
     name: 'Лабиринт',
-    thumbImg: 'img/maze-thumb.png',
+    thumbImg: 'img/maze-thumb.jpg',
     thumbAlt: 'maze',
     desriptionText:
       'Строит лабиринт с заданным размером и ищет кратчайший путь.',
@@ -28,7 +28,7 @@ const LIST_OF_GAMES = [
   },
   {
     name: 'Косынка',
-    thumbImg: 'img/solitare-thumb.png',
+    thumbImg: 'img/solitare-thumb.jpg',
     thumbAlt: 'solitaire',
     desriptionText:
       'Цель игры — разложить карты по мастям в порядке от туза до короля в четыре стопки.',
@@ -36,7 +36,7 @@ const LIST_OF_GAMES = [
   },
   {
     name: 'Пятнашки',
-    thumbImg: 'img/15-thumb.png',
+    thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
       'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',

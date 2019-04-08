@@ -29,8 +29,36 @@ function game15(initElement) {
       tds[i].innerHTML = arrayInitialLocations[i];
     }
     document.querySelector('.winner15').style.display = 'none';
-  }
 
+    document.querySelector('.container').addEventListener('click', event => {
+      const $el = event.target;
+
+      if ($el.tagName === 'TD' && $el.innerHTML !== '') {
+        if (
+          ($el.parentNode.rowIndex === tdEmpty.parentNode.rowIndex &&
+            Math.abs($el.cellIndex - tdEmpty.cellIndex) === 1) ||
+          ($el.cellIndex === tdEmpty.cellIndex &&
+            Math.abs($el.parentNode.rowIndex - tdEmpty.parentNode.rowIndex) ===
+              1)
+        ) {
+          tdEmpty.innerHTML = $el.innerHTML;
+          $el.innerHTML = '';
+          tdEmpty = $el;
+        }
+        testWin();
+      }
+    });
+
+    document.querySelector('.restart').addEventListener('click', () => {
+      arrayInitialLocations = null;
+
+      while (!isValidArrayOfNumbers(arrayInitialLocations)) {
+        arrayInitialLocations = createLayoutOfNumbers();
+      }
+
+      createNewTable();
+    });
+  }
 
   function createLayoutOfNumbers() {
     const arrayOfNumbers = [];
@@ -39,7 +67,6 @@ function game15(initElement) {
     }
     return arrayOfNumbers.sort((a, b) => Math.random() - 0.5);
   }
-
 
   function isValidArrayOfNumbers(arrayTested) {
     if (!arrayTested) return;
@@ -63,7 +90,6 @@ function game15(initElement) {
     }
     document.querySelector('.winner15').style.display = 'flex';
   }
-
   //     first run
 
   let tdEmpty;
@@ -74,36 +100,4 @@ function game15(initElement) {
   }
   arrayInitialLocations.push(0);
   createNewTable();
-  
-
-  //    event handling
-
-  initElement.addEventListener('click', function(event) {
-    let $el = event.target;
-    if ($el.tagName === 'BUTTON') {
-      arrayInitialLocations = null;
-
-      while (!isValidArrayOfNumbers(arrayInitialLocations)) {
-        arrayInitialLocations = createLayoutOfNumbers();
-      }
-
-      createNewTable();
-
-    }
-
-    if ($el.tagName === 'TD' && $el.innerHTML !== '') {
-      if (
-        ($el.parentNode.rowIndex === tdEmpty.parentNode.rowIndex &&
-          Math.abs($el.cellIndex - tdEmpty.cellIndex) === 1) ||
-        ($el.cellIndex === tdEmpty.cellIndex &&
-          Math.abs($el.parentNode.rowIndex - tdEmpty.parentNode.rowIndex) === 1)
-      ) {
-        tdEmpty.innerHTML = $el.innerHTML;
-        $el.innerHTML = '';
-        tdEmpty = $el;
-      }
-    }
-
-    testWin();
-  });
 }
