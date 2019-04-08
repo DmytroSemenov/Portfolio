@@ -7,14 +7,15 @@ body {
   font-size: 16px;
   background: linear-gradient(
     135deg,
-    #feffb6 25%,
+    #feffb6 30%,
     #cfcece 0,
     #cfcece 50%,
     #feffb6 0,
-    #feffb6 75%,
-    #cfcece 0
+    #fff 0%,
+    #fff 0
   );
   background-size: 1550px 1550px;
+  background-repeat: no-repeat;
 }
 
 .container-portfolio {
@@ -31,6 +32,10 @@ h1 {
   line-height: normal;
 
   color: #111111;
+}
+.sterssed {
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
 }
 
 h2 {
@@ -49,10 +54,13 @@ h2 {
 }
 
 .slider {
-  /* position: relative; */
+  position: relative;
   margin: 0px auto;
   width: 1200px;
   height: 610px;
+}
+
+.slider__crop {
   overflow: hidden;
 }
 
@@ -63,15 +71,22 @@ h2 {
 }
 
 .slider__element {
+  border-left: 5px solid white;
+  border-right: 5px solid white;
   min-width: 345px;
   height: 610px;
   background-color: #fff;
-  padding: 0 30px;
+  padding: 0 20px 0 25px;
   border-radius: 3px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   margin-right: 80px;
   cursor: pointer;
 }
+
+.slider__element:hover{
+  border-left: 5px solid red;
+}
+
 .slider__element__text {
   margin-top: 30px;
 }
@@ -83,10 +98,15 @@ h2 {
   border-radius: 50%;
   font-size: 24px;
   color: #444;
-  margin-left: -30px;
-  top: 50%;
+  left: -24px;
+  top: 45%;
   cursor: pointer;
 }
+
+.slider__left:hover {
+  background-color: #0a0;
+}
+
 .slider__right {
   position: absolute;
   background: #ddd;
@@ -94,10 +114,15 @@ h2 {
   border-radius: 50%;
   font-size: 24px;
   color: #444;
-  margin-left: 1175px;
-  top: 50%;
+  right: -20px;;
+  top: 45%;
   cursor: pointer;
 }
+
+.slider__right:hover {
+  background-color: #0a0;
+}
+
 .game-place {
   position: relative;
   padding: 0 60px;

@@ -283,7 +283,7 @@ function init(gameContainer) {
       y = bestNumber.nextY;
 
       if (bestNumber.value !== 1) {
-        setTimeout(drawOneStep, 20);
+        setTimeout(drawOneStep, 0);
       }
     }
     drawOneStep();
@@ -304,8 +304,8 @@ function init(gameContainer) {
     <form class="dimensions" name="dimensions">
     <fieldset name="set">
       <legend>Maze dimensions</legend>
-      <input name="xSize" size="1" value="31" />
-      <input name="ySize" size="1" value="21" />
+      <input name="xSize" size="1" value="101" />
+      <input name="ySize" size="1" value="51" />
       <input id="start" type="button" value="Create maze" />
     </fieldset>
   </form>
