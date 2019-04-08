@@ -2,11 +2,12 @@
 function game15(initElement) {
   function createNewTable() {
     initElement.innerHTML = `
-  <table class="container"></table>
-  <button class="restart">START NEW GAME</button>
-  <div class="winner visibility"><span>You win!</span></div>
-  `;
-    const table = document.querySelector('.container'); // conteiner
+        <table class="container"></table>
+        <button class="restart">START NEW GAME</button>
+        <div class="winner15"><span class="win">You win!</span></div>
+        `;
+
+    const table = document.querySelector('.container');
     table.innerHTML = '';
 
     for (let i = 0; i < 4; i++) {
@@ -29,6 +30,7 @@ function game15(initElement) {
     }
   }
 
+
   function createLayoutOfNumbers() {
     const arrayOfNumbers = [];
     for (let i = 0; i < 16; i++) {
@@ -36,6 +38,7 @@ function game15(initElement) {
     }
     return arrayOfNumbers.sort((a, b) => Math.random() - 0.5);
   }
+
 
   function isValidArrayOfNumbers(arrayTested) {
     if (!arrayTested) return;
@@ -57,7 +60,7 @@ function game15(initElement) {
     for (let i = 1; i < 16; i++) {
       if (tds[i - 1].innerHTML != i) return;
     }
-    document.querySelector('.winner').classList.remove('visibility');
+    document.querySelector('.winner15').style.display = 'flex';
   }
 
   //     first run
@@ -70,13 +73,13 @@ function game15(initElement) {
   }
   arrayInitialLocations.push(0);
   createNewTable();
+  document.querySelector('.winner15').style.display = 'none';
 
   //    event handling
 
-  document.body.addEventListener('click', function(event) {
+  initElement.addEventListener('click', function(event) {
     let $el = event.target;
     if ($el.tagName === 'BUTTON') {
-      document.querySelector('.winner').classList.add('visibility');
       arrayInitialLocations = null;
 
       while (!isValidArrayOfNumbers(arrayInitialLocations)) {
@@ -84,6 +87,7 @@ function game15(initElement) {
       }
 
       createNewTable();
+
     }
 
     if ($el.tagName === 'TD' && $el.innerHTML !== '') {

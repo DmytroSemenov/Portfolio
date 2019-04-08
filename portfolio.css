@@ -20,7 +20,6 @@ body {
 
 .container-portfolio {
   width: 1440px;
-  /* background-color: #e5e5e5; */
   margin: 0 auto;
   padding: 100px 120px;
 }
@@ -34,7 +33,7 @@ h1 {
   color: #111111;
 }
 .sterssed {
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #db4951;
   padding-bottom: 10px;
 }
 
@@ -83,7 +82,7 @@ h2 {
   cursor: pointer;
 }
 
-.slider__element:hover{
+.slider__element:hover {
   border-left: 5px solid red;
 }
 
@@ -104,7 +103,7 @@ h2 {
 }
 
 .slider__left:hover {
-  background-color: #0a0;
+  background-color: #db4951;
 }
 
 .slider__right {
@@ -114,13 +113,13 @@ h2 {
   border-radius: 50%;
   font-size: 24px;
   color: #444;
-  right: -20px;;
+  right: -20px;
   top: 45%;
   cursor: pointer;
 }
 
 .slider__right:hover {
-  background-color: #0a0;
+  background-color: #db4951;
 }
 
 .game-place {
@@ -128,16 +127,25 @@ h2 {
   padding: 0 60px;
   margin: 100px auto;
   width: 1200px;
-  /* transition: height 250ms; */
   min-height: 800px;
   background-color: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
 }
+
 .game-place__header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
+
+.game-place__game {
+  margin-top: 60px;
+}
+
+.game-place__game__text {
+  width: 600px;
+}
+
 hr {
   margin-top: 10px;
   border: none;

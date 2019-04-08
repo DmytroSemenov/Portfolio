@@ -23,15 +23,16 @@
 .highlight {
   background-color: rgb(153, 153, 255);
 }
-/* .winner {
+.winner15 {
   display: flex;
 }
-.visibility {
+/* .visibility {
   display: none;
 } */
-.winner span {
+
+.win {
   background-color: rgba(255, 0, 0, 0.6);
   margin: 0 auto;
   border-radius: 5px;
-  /* padding: 10px; */
+  padding: 10px;
 }

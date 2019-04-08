@@ -329,4 +329,8 @@ class Game {
   }
 }
 
-// new Game();
+function initSolitare(gameContainer) {
+  new Game(gameContainer);
+}
+
+
