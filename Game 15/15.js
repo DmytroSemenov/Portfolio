@@ -28,6 +28,7 @@ function game15(initElement) {
       }
       tds[i].innerHTML = arrayInitialLocations[i];
     }
+    document.querySelector('.winner15').style.display = 'none';
   }
 
 
@@ -73,7 +74,7 @@ function game15(initElement) {
   }
   arrayInitialLocations.push(0);
   createNewTable();
-  document.querySelector('.winner15').style.display = 'none';
+  
 
   //    event handling
 
