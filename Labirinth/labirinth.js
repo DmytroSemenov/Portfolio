@@ -1,8 +1,8 @@
 'use strict';
 
-window.addEventListener('load', init);
+// window.addEventListener('load', init);
 
-function init() {
+function init(gameContainer) {
   const LEGEND = {
     s: 'cell__start',
     f: 'cell__finish',
@@ -17,7 +17,7 @@ function init() {
   let changeSell = changeWall;
   let canReach = false;
 
-  _renderHTML();
+  _renderHTML(gameContainer);
 
   document.getElementById('start').addEventListener('click', () => {
     mazeDimenshions.xSize = +document.forms[0].elements.xSize.value;
@@ -232,7 +232,7 @@ function init() {
       cellsInTurn = workArray;
 
       if (cellsInTurn.length) {
-        setTimeout(doSteps, 20);
+        setTimeout(doSteps, 0);
       } else {
         if (canReach) {
           drawBackWay(table);
@@ -259,7 +259,7 @@ function init() {
       canReach = true;
     }
     if (maze[yY] && maze[yY][xX] === 0) {
-      table.rows[yY].cells[xX].innerHTML = turn;
+      // table.rows[yY].cells[xX].innerHTML = turn;
       maze[yY][xX] = turn;
       currentTurn.push([xX, yY]);
     }
@@ -299,8 +299,8 @@ function init() {
     }
   }
 
-  function _renderHTML() {
-    document.body.innerHTML = `
+  function _renderHTML(gameContainer) {
+    gameContainer.innerHTML = `
     <form class="dimensions" name="dimensions">
     <fieldset name="set">
       <legend>Maze dimensions</legend>

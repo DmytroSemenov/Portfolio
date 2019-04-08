@@ -4,11 +4,103 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="portfolio.css" />
-    <script src="portfolio.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./Game 15/15.css" />
+    <link rel="stylesheet" type="text/css" href="./Labirinth/lab.css" />
+    <link rel="stylesheet" type="text/css" href="./Solitaire/css/solitaire.css" />
+
+    <script src="./Solitaire/js/config.js" defer></script>
+    <script src="./Solitaire/js/stack.js" defer></script>
+    <script src="./Solitaire/js/card.js" defer></script>
+    <script src="./Solitaire/js/game.js" defer></script>
+    <script src="./Labirinth/labirinth.js" defer></script>
+    <script src="./Game 15/15.js" defer></script>
+    <script src="slider.js" defer></script>
+
+
+
+
+
   </head>
 
   <body>
-    
+    <div class="container-portfolio">
+      <h1 class="my-works">Мои работы</h1>
+      <div class="slider">
+        <div class="slider__container">
+          <div class="slider__element">
+            <h1>
+              01
+              <hr />
+            </h1>
+            <h2>
+              Пятнашки
+            </h2>
+            <img src="img\15-thumb.png" alt="15" />
+            <div class="slider__element__text">
+              Перемещая костяшки по коробке, добиться упорядочивания их по
+              номерам, желательно сделав как можно меньше перемещений.
+            </div>
+          </div>
+          <div class="slider__element">
+            <h1>
+              02
+              <hr />
+            </h1>
+            <h2>
+              Лабиринт
+            </h2>
+            <img src="img\maze-thumb.png" alt="Maze" />
+            <div class="slider__element__text">
+              Строит лабиринт с заданным размером и ищет кратчайший путь.
+            </div>
+          </div>
+          <div class="slider__element">
+            <h1>
+              03
+              <hr />
+            </h1>
+            <h2>
+              Косынка
+            </h2>
+            <img src="img\solitare-thumb.png" alt="Solitare" />
+            <div class="slider__element__text">
+              Цель игры — разложить карты по мастям в порядке от туза до короля
+              в четыре стопки.
+            </div>
+          </div>
+          <div class="slider__element">
+            <h1>
+              04
+              <hr />
+            </h1>
+            <h2>
+              Пятнашки
+            </h2>
+            <img src="img\15-thumb.png" alt="15" />
+          </div>
+        </div>
+        <div class="slider__left"><</div>
+        <div class="slider__right">></div>
+      </div>
+      <div class="game-place">
+        <div class="game-place__header">
+          <h1>
+            Домашки
+            <hr />
+          </h1>
+
+          <div>
+            Я уже многое знаю и умею. Выбери любую из моих домашек и посмотри,
+            как она работает.
+          </div>
+        </div>
+        <div class="game-place__game"></div>
+      </div>
+    </div>
   </body>
 </html>

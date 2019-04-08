@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(
+    135deg,
+    #feffb6 25%,
+    #cfcece 0,
+    #cfcece 50%,
+    #feffb6 0,
+    #feffb6 75%,
+    #cfcece 0
+  );
+  background-size: 1550px 1550px;
+}
+
+.container-portfolio {
+  width: 1440px;
+  /* background-color: #e5e5e5; */
+  margin: 0 auto;
+  padding: 100px 120px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: normal;
+
+  color: #111111;
+}
+
+h2 {
+  margin-top: -10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+
+  color: #111111;
+}
+
+.my-works {
+  /* margin: 0 auto; */
+  /* padding: 100px 0 0 120px; */
+}
+
+.slider {
+  /* position: relative; */
+  margin: 0px auto;
+  width: 1200px;
+  height: 610px;
+  overflow: hidden;
+}
+
+.slider__container {
+  display: inline-flex;
+  justify-content: flex-start;
+  transition: margin-left 250ms;
+}
+
+.slider__element {
+  min-width: 345px;
+  height: 610px;
+  background-color: #fff;
+  padding: 0 30px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  margin-right: 80px;
+  cursor: pointer;
+}
+.slider__element__text {
+  margin-top: 30px;
+}
+
+.slider__left {
+  position: absolute;
+  background: #ddd;
+  padding: 8px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #444;
+  margin-left: -30px;
+  top: 50%;
+  cursor: pointer;
+}
+.slider__right {
+  position: absolute;
+  background: #ddd;
+  padding: 8px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #444;
+  margin-left: 1175px;
+  top: 50%;
+  cursor: pointer;
+}
+.game-place {
+  position: relative;
+  padding: 0 60px;
+  margin: 100px auto;
+  width: 1200px;
+  /* transition: height 250ms; */
+  min-height: 800px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+.game-place__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+hr {
+  margin-top: 10px;
+  border: none;
+  background-color: red;
+  color: red;
+  height: 2px;
+}

@@ -1,14 +1,14 @@
 .container {
   border-collapse: collapse;
   background-color: #ccc;
-  margin: 50px auto;
+  margin: 0px auto;
   cursor: pointer;
 }
 
 .container td {
   height: 80px;
   min-width: 80px;
-  font-size: 50px;
+  font-size: 40px;
   border: 2px solid gray;
   text-align: center;
   vertical-align: middle;
@@ -16,22 +16,22 @@
 
 .restart {
   display: flex;
-  margin: -30px auto;
+  margin: 30px auto;
   cursor: pointer;
 }
 
 .highlight {
   background-color: rgb(153, 153, 255);
 }
-.winner {
+/* .winner {
   display: flex;
 }
 .visibility {
   display: none;
-}
+} */
 .winner span {
   background-color: rgba(255, 0, 0, 0.6);
-  margin: 50px auto;
+  margin: 0 auto;
   border-radius: 5px;
-  padding: 10px;
+  /* padding: 10px; */
 }

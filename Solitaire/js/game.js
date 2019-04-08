@@ -1,10 +1,11 @@
 class Game {
-  constructor() {
+  constructor(gameContainer) {
     this._onCardSelected = this._onCardSelected.bind(this);
     this._onCardDoubleclick = this._onCardDoubleclick.bind(this);
     this._hasNextTurn = this._hasNextTurn.bind(this);
     this._createAvatar = this._createAvatar.bind(this);
 
+    this._renderHTML(gameContainer)
     this.start();
   }
 
@@ -135,7 +136,7 @@ class Game {
     // console.log(event);
 
     this.selectedStack.unselect();
-    
+
     // double click
     // if (this.selectedCards[0] === cards[0])
     if (!stack.canAccept(this.selectedCards)) {
@@ -209,7 +210,7 @@ class Game {
         baseDeck.push(new Card({ suitIndex, signIndex }));
       }
     }
-    
+
     return baseDeck.sort((a, b) => Math.random() - 0.5);
   }
 
@@ -299,6 +300,33 @@ class Game {
     }
     this.timerId = setTimeout(this._hasNextTurn, DELAY_TO_HINT);
   }
+
+  _renderHTML(gameContainer) {
+    gameContainer.innerHTML = `
+    <div id="gameTable" class="game" onselectstart="return false">
+      <div class="deck__main">
+        <div data-stack="base" class="placeholder"></div>
+        <div data-stack="baseR" class="placeholder"></div>
+      </div>
+      <div class="deck__final">
+        <div data-stack="final_1" class="placeholder"></div>
+        <div data-stack="final_2" class="placeholder"></div>
+        <div data-stack="final_3" class="placeholder"></div>
+        <div data-stack="final_4" class="placeholder"></div>
+      </div>
+      <div class="decks__workflow">
+        <div data-stack="num_1" class="placeholder"></div>
+        <div data-stack="num_2" class="placeholder"></div>
+        <div data-stack="num_3" class="placeholder"></div>
+        <div data-stack="num_4" class="placeholder"></div>
+        <div data-stack="num_5" class="placeholder"></div>
+        <div data-stack="num_6" class="placeholder"></div>
+        <div data-stack="num_7" class="placeholder"></div>
+      </div>
+      <div class="winner">YOU WIN!</div>
+    </div>
+    `;
+  }
 }
 
-new Game();
+// new Game();

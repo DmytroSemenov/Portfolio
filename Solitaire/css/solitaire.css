@@ -1,11 +1,11 @@
-html, body {
+/* html, body {
   width: 100%;
   padding-bottom: 30px;
-}
+} */
 
 .game {
   border: 1px solid #000;
-  /* width: 1000px; */
+  max-width: 900px;
   margin: 0 auto;
   padding: 10px;
   min-height: 800px;
@@ -38,8 +38,8 @@ html, body {
 .placeholder {
   float: left;
   margin: 10px;
-  width: 110px;
-  height: 160px;
+  width: 100px;
+  height: 150px;
   border-radius: 5px;
   color: transparent;
   border: 2px solid rgba(150, 150, 150, 0.7);
@@ -81,8 +81,8 @@ html, body {
 .avatar {
   position: absolute;
 
-  width: 110px;
-  height: 160px;
+  width: 100px;
+  height: 150px;
   border-radius: 5px;
   color: transparent;
   border: 2px solid rgba(150, 150, 150, 0.7);
