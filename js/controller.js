@@ -15,6 +15,7 @@ class Portfolio {
       items[i] = new Item(i, LIST_OF_GAMES[i]);
       itemsContainer.append(items[i].element);
       items[i].element.addEventListener('click', () => {
+        this.gameContainer.hidden = false;
         this.addGame(LIST_OF_GAMES[i]);
       });
     }
@@ -45,7 +46,9 @@ class Portfolio {
 
   addGame(item) {
     this.gameContainerHead.innerHTML = `
-      <h1><span class="sterssed">${item.name}</span></h1>
+    <div class="game-place__game__name"><span class="sterssed">
+    ${item.name}
+    </span></div>
       <div class="game-place__game__text">${item.desriptionText}</div>
     `;
 

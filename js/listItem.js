@@ -18,12 +18,12 @@ class Item {
   _render() {
     this.element.className = 'slider__element';
     this.element.innerHTML = `
-        <h1>
+        <div class="slider__element__number">
             <span class="sterssed">0${this._number}</span>
-        </h1>
-        <h2>
+        </div>
+        <div class="slider__element__name">
             ${this.name}
-        </h2>
+        </div>
         <img src="${this._thumbImg}" alt="${this._thumbAlt}" />
         <div class="slider__element__text">
             ${this.desriptionText}
