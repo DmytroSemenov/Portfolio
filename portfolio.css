@@ -91,11 +91,12 @@ h1 {
 
 .slider__element:hover::after {
   position: absolute;
-  height: 610px;
+  height: 609px;
   top: 0;
   left: 0;
   content: "";
-  border-left: 5px solid red;
+  border-left: 10px solid #DB4951;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .slider__element__text {
