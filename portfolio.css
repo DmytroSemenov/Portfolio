@@ -94,8 +94,8 @@ h1 {
   height: 609px;
   top: 0;
   left: 0;
-  content: "";
-  border-left: 10px solid #DB4951;
+  content: '';
+  border-left: 10px solid #db4951;
   border-radius: 3px 0px 0px 3px;
 }
 
@@ -105,13 +105,16 @@ h1 {
 
 .slider__left {
   position: absolute;
-  background: #ddd;
-  padding: 8px 16px;
+  background: #dae1ec;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
   border-radius: 50%;
-  font-size: 24px;
-  color: #444;
-  left: -24px;
-  top: 45%;
+  font-size: 48px;
+  color: #1a1a1a;
+  left: -50px;
+  top: 40%;
   cursor: pointer;
 }
 
@@ -121,13 +124,16 @@ h1 {
 
 .slider__right {
   position: absolute;
-  background: #ddd;
-  padding: 8px 16px;
+  background: #dae1ec;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
   border-radius: 50%;
-  font-size: 24px;
-  color: #444;
-  right: -20px;
-  top: 45%;
+  font-size: 48px;
+  color: #1a1a1a;
+  right: -50px;
+  top: 40%;
   cursor: pointer;
 }
 
@@ -150,7 +156,6 @@ h1 {
   justify-content: space-between;
 }
 
-
 .game-place__game__name {
   font-style: normal;
   font-weight: bold;
@@ -167,4 +172,3 @@ h1 {
 .game-place__game {
   padding-bottom: 60px;
 }
-
