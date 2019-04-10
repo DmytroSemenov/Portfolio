@@ -26,20 +26,23 @@ class Portfolio {
     const arrowRight = document.querySelector('.slider__right');
     const arrowleft = document.querySelector('.slider__left');
     const shiftAmount = LIST_OF_GAMES.length - 4;
+    
+    const cardStyles = getComputedStyle(document.querySelector('.slider__element'));
+    const cardBounds = parseInt(cardStyles.marginRight) + parseInt(cardStyles.inlineSize);
 
     arrowleft.addEventListener('click', function() {
       const movement = getComputedStyle(slider);
       const shift = parseInt(movement.marginLeft);
       if (shift < 0) {
-        slider.style.marginLeft = shift + CARD_SIZE + 'px';
+        slider.style.marginLeft = shift + cardBounds + 'px';
       }
     });
 
     arrowRight.addEventListener('click', function() {
       const movement = getComputedStyle(slider);
       const shift = parseInt(movement.marginLeft);
-      if (shift > -CARD_SIZE * shiftAmount) {
-        slider.style.marginLeft = shift - CARD_SIZE + 'px';
+      if (shift > - cardBounds * shiftAmount) {
+        slider.style.marginLeft = shift - cardBounds + 'px';
       }
     });
   }

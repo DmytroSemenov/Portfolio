@@ -1,6 +1,4 @@
 'use strict';
-const CARD_SIZE = 346+80;
-
 const LIST_OF_GAMES = [
   {
     name: 'Домашки',
