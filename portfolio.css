@@ -116,6 +116,7 @@ h1 {
   left: -50px;
   top: 40%;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .slider__left:hover {
@@ -135,6 +136,7 @@ h1 {
   right: -50px;
   top: 40%;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .slider__right:hover {

@@ -1,83 +1,81 @@
 'use strict';
 const LIST_OF_GAMES = [
   {
-    name: 'Домашки',
+    name: 'Homeworks',
     thumbImg: '',
     thumbAlt: '',
-    desriptionText:
-      'Вы можете выбрать любую из моих домашек и посмотреть, как она работает.',
-    startFunction: ()=>{}
+    desriptionText: 'You can choose any of my homework and see how it works.',
+    startFunction: () => {}
   },
   {
-    name: 'Пятнашки',
+    name: '15',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
-      'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',
+      'Moving the knuckles around the box, to achieve ordering them by numbers, preferably making as few moves as possible.',
     startFunction: game15
   },
   {
-    name: 'Лабиринт',
+    name: 'The Maze',
     thumbImg: 'img/maze-thumb.jpg',
     thumbAlt: 'maze',
     desriptionText:
-      'Строит лабиринт с заданным размером и ищет кратчайший путь.',
+      'The app builds a maze with a given size and looks for the shortest path.',
     startFunction: init
   },
   {
-    name: 'Косынка',
+    name: 'Solitaire',
     thumbImg: 'img/solitare-thumb.jpg',
     thumbAlt: 'solitaire',
     desriptionText:
-      'Цель игры — разложить карты по мастям в порядке от туза до короля в четыре стопки.',
+      'The first objective is to release and play into position certain cards to build up each foundation, in sequence and in suit, from the ace through the king. The ultimate objective is to build the whole pack onto the foundations.',
     startFunction: initSolitare
   },
   {
-    name: 'Пятнашки',
+    name: '15',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
-      'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',
+      'Moving the knuckles around the box, to achieve ordering them by numbers, preferably making as few moves as possible.',
     startFunction: game15
   },
   {
-    name: 'Домашки',
+    name: 'Homeworks',
     thumbImg: '',
     thumbAlt: '',
-    desriptionText:
-      'Вы можете выбрать любую из моих домашек и посмотреть, как она работает.',
-    startFunction: ()=>{}
+    desriptionText: 'You can choose any of my homework and see how it works.',
+    startFunction: () => {}
   },
   {
-    name: 'Пятнашки',
+    name: '15',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
-      'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',
+      'Moving the knuckles around the box, to achieve ordering them by numbers, preferably making as few moves as possible.',
     startFunction: game15
   },
   {
-    name: 'Лабиринт',
+    name: 'The Maze',
     thumbImg: 'img/maze-thumb.jpg',
     thumbAlt: 'maze',
     desriptionText:
-      'Строит лабиринт с заданным размером и ищет кратчайший путь.',
+      'The app builds a maze with a given size and looks for the shortest path.',
     startFunction: init
   },
   {
-    name: 'Косынка',
+    name: 'Solitaire',
     thumbImg: 'img/solitare-thumb.jpg',
     thumbAlt: 'solitaire',
     desriptionText:
-      'Цель игры — разложить карты по мастям в порядке от туза до короля в четыре стопки.',
+      'The first objective is to release and play into position certain cards to build up each foundation, in sequence and in suit, from the ace through the king. The ultimate objective is to build the whole pack onto the foundations.',
     startFunction: initSolitare
   },
   {
-    name: 'Пятнашки',
+    name: '15',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
-      'Перемещая костяшки по коробке, добиться упорядочивания их по номерам, желательно сделав как можно меньше перемещений.',
+      'Moving the knuckles around the box, to achieve ordering them by numbers, preferably making as few moves as possible.',
     startFunction: game15
-  },
+  }
 ];
