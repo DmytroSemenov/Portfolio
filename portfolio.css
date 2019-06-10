@@ -82,12 +82,13 @@ h1 {
   min-width: 346px;
   height: 609px;
   background-color: #fff;
-  transition: background-color 250ms;
+  /* transition: background-color 250ms; */
   padding: 30px 30px 50px 30px;
   border-radius: 3px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   margin-right: 80px;
   cursor: pointer;
+  transition: all 0.5s ease-out;
 }
 
 .slider__element:hover::after {
@@ -101,7 +102,8 @@ h1 {
 }
 
 .slider__element:hover {
-  background-color: #ffa;
+  background-color: #aaa;
+  transform: translateY(-5px);
 }
 
 .slider__element__text {
@@ -154,15 +156,16 @@ h1 {
   position: relative;
   margin: 0 auto;
   width: 1200px;
+  min-height: 500px;
   background-color: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
 }
 
 .game-place__header {
-  padding: 60px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  padding: 60px;
 }
 
 .game-place__game__name {
