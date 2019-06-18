@@ -193,6 +193,10 @@ body {
   vertical-align: middle;
   cursor: pointer;
 }
+.game-lab table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
 
 .dimensions {
   width: 30%;
@@ -200,24 +204,16 @@ body {
   text-align: center;
 }
 
-table {
-  border: 2px solid black;
-  border-collapse: collapse;
-}
-
 .cell__start {
   background-color: #0a0;
-  color: #0a0;
 }
 
 .cell__finish {
   background-color: #a00;
-  color: #a00;
 }
 
 .cell__wall {
   background-color: #000;
-  color: #000;
 }
 
 .cell__route {
@@ -229,7 +225,6 @@ table {
   display: flex;
   justify-content: center;
 }
-
 .menu button {
   margin-left: 10px;
 }

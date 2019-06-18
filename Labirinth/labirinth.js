@@ -238,7 +238,7 @@ function init(gameContainer) {
         if (canReach) {
           drawBackWay(table);
         } else {
-          alert('can not reach finish');
+          alert('can not reach the finish');
         }
       }
     }

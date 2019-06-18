@@ -5,7 +5,6 @@
 .game-lab {
   display: table;
   margin: 10px auto;
-
   td {
     width: 10px;
     height: 10px;
@@ -14,17 +13,16 @@
     vertical-align: middle;
     cursor: pointer;
   }
+  table {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
 }
 
 .dimensions {
   width: 30%;
   margin: 0 auto;
   text-align: center;
-}
-
-table {
-  border: 2px solid black;
-  border-collapse: collapse;
 }
 
 .cell__start {
