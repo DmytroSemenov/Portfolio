@@ -1,0 +1,181 @@
+// sass --watch sass/portfolio.scss portfolio.css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #feffb6 30%,
+    #cfcece 0,
+    #cfcece 50%,
+    #feffb6 0,
+    #fff 0%,
+    #fff 0
+  );
+  background-size: 1550px 1550px;
+  background-repeat: no-repeat;
+}
+
+.container-portfolio {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 120px;
+
+  .my-works {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: normal;
+    color: #111111;
+  }
+
+  .slider {
+    position: relative;
+    margin: 0px auto 100px;
+    width: 1200px;
+    height: 610px;
+
+    &__crop {
+      overflow: hidden;
+    }
+    &__container {
+      display: inline-flex;
+      justify-content: flex-start;
+      transition: margin-left 200ms;
+    }
+  }
+
+  .slider__element__number {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    color: #111111;
+    margin-bottom: 32px;
+  }
+
+  .sterssed {
+    border-bottom: 2px solid #db4951;
+    padding-bottom: 10px;
+  }
+
+  .slider__element__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #111111;
+    margin-bottom: 20px;
+  }
+
+  .slider__element {
+    position: relative;
+    min-width: 346px;
+    height: 609px;
+    background-color: #fff;
+    padding: 30px 30px 50px 30px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    margin-right: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+
+  .slider__element:hover::after {
+    position: absolute;
+    height: 609px;
+    top: 0;
+    left: 0;
+    content: '';
+    border-left: 10px solid #db4951;
+    border-radius: 3px 0px 0px 3px;
+  }
+
+  .slider__element:hover {
+    background-color: #aaa;
+    transform: translateY(-5px);
+  }
+
+  .slider__element__text {
+    margin-top: 30px;
+  }
+
+  .slider__left {
+    position: absolute;
+    background: #dae1ec;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #1a1a1a;
+    left: -40px;
+    top: 40%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .slider__left:hover,
+  .slider__right:hover {
+    background-color: #db4951;
+  }
+
+  .slider__right {
+    position: absolute;
+    background: #dae1ec;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #1a1a1a;
+    right: -40px;
+    top: 40%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .game-place {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-height: 500px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+
+    &__header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 60px;
+    }
+
+    &__game__name {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 57px;
+      color: #111111;
+    }
+
+    &__game__text {
+      margin-left: 280px;
+      right: 0px;
+    }
+
+    &__game {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+@import '15.scss';
+@import 'lab.scss';
+@import 'solitaire.scss';
