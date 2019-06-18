@@ -8,7 +8,7 @@ const LIST_OF_GAMES = [
     startFunction: () => {}
   },
   {
-    name: '15',
+    name: 'Fifteen puzzle',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
@@ -32,7 +32,7 @@ const LIST_OF_GAMES = [
     startFunction: initSolitare
   },
   {
-    name: '15',
+    name: 'Fifteen puzzle',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
@@ -47,7 +47,7 @@ const LIST_OF_GAMES = [
     startFunction: () => {}
   },
   {
-    name: '15',
+    name: 'Fifteen puzzle',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:
@@ -71,7 +71,7 @@ const LIST_OF_GAMES = [
     startFunction: initSolitare
   },
   {
-    name: '15',
+    name: 'Fifteen puzzle',
     thumbImg: 'img/15-thumb.jpg',
     thumbAlt: '15',
     desriptionText:

@@ -1,7 +1,5 @@
 'use strict';
-
 // window.addEventListener('load', init);
-
 function init(gameContainer) {
   const LEGEND = {
     s: 'cell__start',

@@ -23,8 +23,8 @@ class Portfolio {
 
   setListeners() {
     const slider = document.querySelector('.slider__container');
-    const arrowRight = document.querySelector('.slider__right');
-    const arrowleft = document.querySelector('.slider__left');
+    const arrowRight = document.querySelector('.slider__button__right');
+    const arrowleft = document.querySelector('.slider__button__left');
     const shiftAmount = LIST_OF_GAMES.length - 4;
     
     const cardStyles = getComputedStyle(document.querySelector('.slider__element'));
@@ -49,10 +49,10 @@ class Portfolio {
 
   addGame(item) {
     this.gameContainerHead.innerHTML = `
-    <div class="game-place__game__name"><span class="sterssed">
+    <div class="game-place__header__name"><span class="sterssed">
     ${item.name}
     </span></div>
-      <div class="game-place__game__text">${item.desriptionText}</div>
+      <div class="game-place__header__text">${item.desriptionText}</div>
     `;
 
     item.startFunction(this.gameContainer);

@@ -3,17 +3,21 @@
   background-color: #ccc;
   margin: 0px auto;
   cursor: pointer;
-}
 
-.container td {
-  height: 80px;
-  min-width: 80px;
-  font-size: 40px;
-  border: 2px solid gray;
-  text-align: center;
-  vertical-align: middle;
-}
+  td {
+    height: 80px;
+    min-width: 80px;
+    font-size: 40px;
+    border: 2px solid gray;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.5s ease-out;
 
+    &:hover {
+      background-color: #f88;
+    }
+  }
+}
 .restart {
   display: flex;
   margin: 30px auto;
@@ -29,7 +33,6 @@
 /* .visibility {
   display: none;
 } */
-
 .win {
   background-color: rgba(255, 0, 0, 0.6);
   margin: 0 auto;

@@ -10,13 +10,13 @@ body {
 
 .container-portfolio {
   font-family: "Roboto", sans-serif;
+  font-style: normal;
   font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 100px 120px;
 }
 .container-portfolio .my-works {
-  font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: normal;
@@ -36,39 +36,64 @@ body {
   justify-content: flex-start;
   transition: margin-left 200ms;
 }
-.container-portfolio .slider__element__number {
-  font-style: normal;
+.container-portfolio .slider__button {
+  position: absolute;
+  background: #dae1ec;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  color: #1a1a1a;
+  top: 40%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.container-portfolio .slider__button__left {
+  left: -40px;
+}
+.container-portfolio .slider__button__right {
+  right: -40px;
+}
+.container-portfolio .slider__button__left:hover, .container-portfolio .slider__button__right:hover {
+  background-color: #db4951;
+}
+.container-portfolio .slider .slider__element {
+  position: relative;
+  margin-right: 80px;
+  min-width: 346px;
+  height: 609px;
+  padding: 30px 30px 50px 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.container-portfolio .slider .slider__element__number {
   font-weight: bold;
   font-size: 48px;
   line-height: 57px;
   color: #111111;
   margin-bottom: 32px;
 }
-.container-portfolio .sterssed {
-  border-bottom: 2px solid #db4951;
-  padding-bottom: 10px;
-}
-.container-portfolio .slider__element__name {
-  font-style: normal;
+.container-portfolio .slider .slider__element__name {
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
   color: #111111;
   margin-bottom: 20px;
 }
-.container-portfolio .slider__element {
-  position: relative;
-  min-width: 346px;
-  height: 609px;
-  background-color: #fff;
-  padding: 30px 30px 50px 30px;
-  border-radius: 3px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-  margin-right: 80px;
-  cursor: pointer;
-  transition: all 0.5s ease-out;
+.container-portfolio .slider .slider__element__text {
+  margin-top: 30px;
 }
-.container-portfolio .slider__element:hover::after {
+.container-portfolio .slider .slider__element:hover {
+  background-color: #aaa;
+  transform: translateY(-5px);
+}
+.container-portfolio .slider .slider__element:hover::after {
   position: absolute;
   height: 609px;
   top: 0;
@@ -77,51 +102,7 @@ body {
   border-left: 10px solid #db4951;
   border-radius: 3px 0px 0px 3px;
 }
-.container-portfolio .slider__element:hover {
-  background-color: #aaa;
-  transform: translateY(-5px);
-}
-.container-portfolio .slider__element__text {
-  margin-top: 30px;
-}
-.container-portfolio .slider__left {
-  position: absolute;
-  background: #dae1ec;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 50%;
-  font-size: 40px;
-  color: #1a1a1a;
-  left: -40px;
-  top: 40%;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.container-portfolio .slider__left:hover,
-.container-portfolio .slider__right:hover {
-  background-color: #db4951;
-}
-.container-portfolio .slider__right {
-  position: absolute;
-  background: #dae1ec;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 50%;
-  font-size: 40px;
-  color: #1a1a1a;
-  right: -40px;
-  top: 40%;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 .container-portfolio .game-place {
-  position: relative;
   margin: 0 auto;
   max-width: 1200px;
   min-height: 500px;
@@ -134,19 +115,23 @@ body {
   justify-content: space-between;
   padding: 60px;
 }
-.container-portfolio .game-place__game__name {
+.container-portfolio .game-place__header__name {
+  min-width: 250px;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 57px;
+  font-size: 40px;
+  line-height: 50px;
   color: #111111;
 }
-.container-portfolio .game-place__game__text {
-  margin-left: 280px;
-  right: 0px;
+.container-portfolio .game-place__header__text {
+  width: 50%;
 }
 .container-portfolio .game-place__game {
   padding-bottom: 60px;
+}
+.container-portfolio .sterssed {
+  border-bottom: 2px solid #db4951;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -155,7 +140,6 @@ body {
   margin: 0px auto;
   cursor: pointer;
 }
-
 .container td {
   height: 80px;
   min-width: 80px;
@@ -163,6 +147,10 @@ body {
   border: 2px solid gray;
   text-align: center;
   vertical-align: middle;
+  transition: all 0.5s ease-out;
+}
+.container td:hover {
+  background-color: #f88;
 }
 
 .restart {
@@ -197,6 +185,14 @@ body {
   display: table;
   margin: 10px auto;
 }
+.game-lab td {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
 
 .dimensions {
   width: 30%;
@@ -209,31 +205,19 @@ table {
   border-collapse: collapse;
 }
 
-.game-lab td {
-  /* background-color: #fff; */
-  width: 10px;
-  height: 10px;
-  /* border: 1px solid black; */
-  font-size: 10px;
-  /* display: table-cell; */
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
 .cell__start {
   background-color: #0a0;
-  /* color: #0a0; */
+  color: #0a0;
 }
 
 .cell__finish {
   background-color: #a00;
-  /* color: #a00; */
+  color: #a00;
 }
 
 .cell__wall {
   background-color: #000;
-  /* color: #000; */
+  color: #000;
 }
 
 .cell__route {
@@ -250,10 +234,6 @@ table {
   margin-left: 10px;
 }
 
-/* html, body {
-  width: 100%;
-  padding-bottom: 30px;
-} */
 .game {
   border: 1px solid #000;
   max-width: 900px;
