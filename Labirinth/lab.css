@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+.game-lab {
+  display: table;
+  margin: 10px auto;
+}
+
+.dimensions {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.game-lab td {
+  /* background-color: #fff; */
+  width: 10px;
+  height: 10px;
+  /* border: 1px solid black; */
+  font-size: 10px;
+  /* display: table-cell; */
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cell__start {
+  background-color: #0a0;
+  /* color: #0a0; */
+}
+
+.cell__finish {
+  background-color: #a00;
+  /* color: #a00; */
+}
+
+.cell__wall {
+  background-color: #000;
+  /* color: #000; */
+}
+
+.cell__route {
+  background-color: #ff0;
+  color: #000;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+.menu button {
+  margin-left: 10px;
+}
